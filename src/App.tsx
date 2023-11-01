@@ -41,10 +41,10 @@ import { CognitoHostedUIIdentityProvider } from "@aws-amplify/auth";
 Amplify.configure({
   Auth: {
     region: "ap-northeast-1",
-    userPoolId: "ap-northeast-1_yv1oaQm7t",
-    userPoolWebClientId: "3ium5p5mrfkubli603dqui7rck",
+    userPoolId: "ap-northeast-1_XXXXXXXXXX",
+    userPoolWebClientId: "XXXXXXXXXXXXXX",
     oauth: {
-      domain: "simplehoiku-dev.auth.ap-northeast-1.amazoncognito.com",
+      domain: "XXXXXXXXXXXXXX.auth.ap-northeast-1.amazoncognito.com",  //「https://」不要
       scope: ["openid"],
       redirectSignIn: "http://localhost:3000/",
       redirectSignOut: "http://localhost:3000/",
