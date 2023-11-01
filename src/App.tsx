@@ -44,10 +44,10 @@ Amplify.configure({
     userPoolId: "ap-northeast-1_yv1oaQm7t",
     userPoolWebClientId: "3ium5p5mrfkubli603dqui7rck",
     oauth: {
-      domain: "https://simplehoiku-dev.auth.ap-northeast-1.amazoncognito.com",
+      domain: "simplehoiku-dev.auth.ap-northeast-1.amazoncognito.com",
       scope: ["openid"],
-      redirectSignIn: "https://localhost:3000/",
-      redirectSignOut: "https://localhost:3000/",
+      redirectSignIn: "http://localhost:3000/",
+      redirectSignOut: "http://localhost:3000/",
       responseType: "code",
     },
   },
