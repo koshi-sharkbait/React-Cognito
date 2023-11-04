@@ -1,39 +1,3 @@
-// import { Amplify } from 'aws-amplify';
-
-// import { Authenticator } from '@aws-amplify/ui-react';
-// import '@aws-amplify/ui-react/styles.css';
-
-
-// Amplify.configure({
-//   aws_project_region: process.env.REACT_APP_AWS_PROJECT_REGION,
-//   aws_cognito_region: process.env.REACT_APP_AWS_COGNITO_REGION,
-//   aws_user_pools_id: process.env.REACT_APP_AWS_USER_POOLS_ID,
-//   aws_user_pools_web_client_id:  process.env.REACT_APP_AWS_USER_POOLS_CLIENT_ID,
-//   google_client_id: process.env.REACT_APP_GOOGLE_CLIENT_ID,
-// });
-
-// export default function App() {
-//   return (
-//     <Authenticator loginMechanisms={['email']}>
-//       {({ signOut, user }) => (
-//         <main>
-//           <h1>Hello {user?.username}</h1>
-//           <button onClick={signOut}>Sign out</button>
-//         </main>
-//       )}
-//     </Authenticator>
-//   );
-// }
-
-
-
-
-
-
-
-
-
-
 import { useEffect, useState } from "react";
 import { Amplify, Auth, Hub } from "aws-amplify";
 import { CognitoHostedUIIdentityProvider } from "@aws-amplify/auth";
@@ -41,10 +5,10 @@ import { CognitoHostedUIIdentityProvider } from "@aws-amplify/auth";
 Amplify.configure({
   Auth: {
     region: "ap-northeast-1",
-    userPoolId: "ap-northeast-1_XXXXXXXXXX",
-    userPoolWebClientId: "XXXXXXXXXXXXXX",
+    userPoolId: "ap-northeast-1_******",
+    userPoolWebClientId: "**************",
     oauth: {
-      domain: "XXXXXXXXXXXXXX.auth.ap-northeast-1.amazoncognito.com",  //「https://」不要
+      domain: "*********.auth.ap-northeast-1.amazoncognito.com",
       scope: ["openid"],
       redirectSignIn: "http://localhost:3000/",
       redirectSignOut: "http://localhost:3000/",
